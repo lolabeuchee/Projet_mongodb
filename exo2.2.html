@@ -1,0 +1,86 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.2.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="badf9077-2f1d-45ae-9937-d021da53382a" data-root-id="1408"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1673">
+          {"c2a274e6-fb59-4346-aca7-5af039df2ac9":{"defs":[],"roots":{"references":[{"attributes":{},"id":"1359","type":"SaveTool"},{"attributes":{},"id":"1424","type":"BasicTickFormatter"},{"attributes":{},"id":"1360","type":"ResetTool"},{"attributes":{"line_alpha":{"value":0.8},"line_color":{"value":"#CCCCCC"},"line_width":{"field":"weight"}},"id":"1402","type":"MultiLine"},{"attributes":{},"id":"1429","type":"Selection"},{"attributes":{},"id":"1425","type":"AllLabels"},{"attributes":{"coordinates":null,"data_source":{"id":"1380"},"glyph":{"id":"1397"},"group":null,"hover_glyph":null,"view":{"id":"1382"}},"id":"1381","type":"GlyphRenderer"},{"attributes":{"source":{"id":"1380"}},"id":"1382","type":"CDSView"},{"attributes":{"data":{"end":["ElisaFromont","ChristineGuillemot","PaoloRobuffoGiordano","AnatoleL\u00e9cuyer","PaoloRobuffoGiordano","Anne-H\u00e9l\u00e8neOlivier","JulienPettr\u00e9","EliseBannier","ChristineGuillemot","PaoloRobuffoGiordano","CharlesPontonnier","JulienPettr\u00e9","CharlesPontonnier","JulienPettr\u00e9","GeorgesDumont","GeorgesDumont","CamilleMaumet","Jean-ChristopheFerr\u00e9","Jean-ChristopheFerr\u00e9","AnneSiegel","ArnaudMartin","FabriceLegeai","GerardoRubino","Jean-MarcJ\u00e9z\u00e9quel","YannBusnel"],"start":["S\u00e9bastienLef\u00e8vre","ElisaFromont","ElisaFromont","ClaudioPacchierotti","ClaudioPacchierotti","ClaudioPacchierotti","ClaudioPacchierotti","AnatoleL\u00e9cuyer","PaoloRobuffoGiordano","PaoloRobuffoGiordano","Anne-H\u00e9l\u00e8neOlivier","Anne-H\u00e9l\u00e8neOlivier","JulienPettr\u00e9","JulienPettr\u00e9","CharlesPontonnier","GeorgesDumont","EliseBannier","EliseBannier","Jean-ChristopheFerr\u00e9","AnneSiegel","ArnaudMartin","FabriceLegeai","GerardoRubino","Jean-MarcJ\u00e9z\u00e9quel","YannBusnel"],"weight":[2,1,1,2,7,1,1,1,1,0,1,5,1,0,11,0,2,3,0,0,0,0,0,0,0]},"selected":{"id":"1429"},"selection_policy":{"id":"1428"}},"id":"1384","type":"ColumnDataSource"},{"attributes":{"data":{"adjusted_node_size":[24,12,15,12,11,11,11,13,11,12,11,11,11,9,10,11,10,12,12],"index":["S\u00e9bastienLef\u00e8vre","ElisaFromont","ClaudioPacchierotti","AnatoleL\u00e9cuyer","PaoloRobuffoGiordano","Anne-H\u00e9l\u00e8neOlivier","JulienPettr\u00e9","CharlesPontonnier","GeorgesDumont","ChristineGuillemot","EliseBannier","CamilleMaumet","Jean-ChristopheFerr\u00e9","AnneSiegel","ArnaudMartin","FabriceLegeai","GerardoRubino","Jean-MarcJ\u00e9z\u00e9quel","YannBusnel"]},"selected":{"id":"1427"},"selection_policy":{"id":"1426"}},"id":"1380","type":"ColumnDataSource"},{"attributes":{"below":[{"id":"1349"}],"center":[{"id":"1352"},{"id":"1356"}],"left":[{"id":"1353"}],"renderers":[{"id":"1378"}],"title":{"id":"1341"},"toolbar":{"id":"1362"},"x_range":{"id":"1338"},"x_scale":{"id":"1345"},"y_range":{"id":"1339"},"y_scale":{"id":"1347"}},"id":"1340","subtype":"Figure","type":"Plot"},{"attributes":{"end":1.2,"start":-1.2},"id":"1338","type":"Range1d"},{"attributes":{"source":{"id":"1384"}},"id":"1386","type":"CDSView"},{"attributes":{"coordinates":null,"data_source":{"id":"1384"},"glyph":{"id":"1402"},"group":null,"hover_glyph":null,"view":{"id":"1386"}},"id":"1385","type":"GlyphRenderer"},{"attributes":{"active_scroll":{"id":"1358"},"tools":[{"id":"1357"},{"id":"1358"},{"id":"1359"},{"id":"1360"},{"id":"1361"}]},"id":"1362","type":"Toolbar"},{"attributes":{"style":{"background-color":"lavender","border-radius":"10px","color":"black","padding":"15px","text-align":"justify"},"text":"\n&lt;h1&gt; Explication &lt;/h1&gt;\n&lt;p&gt; Ce r\u00e9seau permet de visualiser les liens entre les auteurs de publications scientifiques, en utilisant un code couleur qui permette de distinguer les auteurs par leurs nombres de publications et en repr\u00e9sentant les liens (co-publications) existant entre les auteurs. l\u2019\u00e9paisseur des traits joignant deux auteurs est proportionnelle au nombre de publications communes entre ceux-ci (Il peut \u00eatre n\u00e9c\u00e9ssaire de zoomer pour s'en rendre compte).&lt;/p&gt;"},"id":"1407","type":"Div"},{"attributes":{"graph_layout":{"AnatoleL\u00e9cuyer":[-0.1062737397222461,-0.14842487513575425],"Anne-H\u00e9l\u00e8neOlivier":[0.11946534133824142,-0.13611145656498522],"AnneSiegel":[-0.9753603972859205,0.32362050203544057],"ArnaudMartin":[-0.0330346632200255,1.0],"CamilleMaumet":[-0.28774206550233233,-0.3767011513891513],"CharlesPontonnier":[0.028542769926189683,-0.18127198949140044],"ChristineGuillemot":[0.16930027429002062,0.09216602373955216],"ClaudioPacchierotti":[0.030036745239533306,-0.06226703289388622],"ElisaFromont":[0.1413669644757911,0.16606009363418137],"EliseBannier":[-0.2525135818233343,-0.28151890438314947],"FabriceLegeai":[0.32555967204953196,-0.8569988523473775],"GeorgesDumont":[-0.013133869429702587,-0.16953111707990634],"GerardoRubino":[0.9293932134544033,-0.7973192283334741],"Jean-ChristopheFerr\u00e9":[-0.33230104024438606,-0.2945707897705009],"Jean-MarcJ\u00e9z\u00e9quel":[0.5488179119718875,0.7545851891116611],"JulienPettr\u00e9":[0.10979020507326108,-0.17612164059472776],"PaoloRobuffoGiordano":[0.07432034356985012,0.013699746065529886],"S\u00e9bastienLef\u00e8vre":[0.17852174745746993,0.25563368343692144],"YannBusnel":[-0.6547558316182327,0.8750717999610269]}},"id":"1387","type":"StaticLayoutProvider"},{"attributes":{"end":1.2,"start":-1.2},"id":"1339","type":"Range1d"},{"attributes":{"high":24,"low":9,"palette":["#3288bd","#66c2a5","#abdda4","#e6f598","#fee08b","#fdae61","#f46d43","#d53e4f"]},"id":"1396","type":"LinearColorMapper"},{"attributes":{"children":[{"id":"1407"},{"id":"1340"}]},"id":"1408","type":"Column"},{"attributes":{"coordinates":null,"edge_renderer":{"id":"1385"},"group":null,"inspection_policy":{"id":"1419"},"layout_provider":{"id":"1387"},"node_renderer":{"id":"1381"},"selection_policy":{"id":"1418"}},"id":"1378","type":"GraphRenderer"},{"attributes":{},"id":"1418","type":"NodesOnly"},{"attributes":{},"id":"1345","type":"LinearScale"},{"attributes":{},"id":"1347","type":"LinearScale"},{"attributes":{},"id":"1350","type":"BasicTicker"},{"attributes":{},"id":"1426","type":"UnionRenderers"},{"attributes":{"coordinates":null,"group":null,"text":"R\u00e9seau de publications scientifiques"},"id":"1341","type":"Title"},{"attributes":{"coordinates":null,"formatter":{"id":"1424"},"group":null,"major_label_policy":{"id":"1425"},"ticker":{"id":"1350"}},"id":"1349","type":"LinearAxis"},{"attributes":{},"id":"1427","type":"Selection"},{"attributes":{"coordinates":null,"formatter":{"id":"1421"},"group":null,"major_label_policy":{"id":"1422"},"ticker":{"id":"1354"}},"id":"1353","type":"LinearAxis"},{"attributes":{},"id":"1419","type":"NodesOnly"},{"attributes":{"axis":{"id":"1349"},"coordinates":null,"group":null,"ticker":null},"id":"1352","type":"Grid"},{"attributes":{},"id":"1421","type":"BasicTickFormatter"},{"attributes":{"axis":{"id":"1353"},"coordinates":null,"dimension":1,"group":null,"ticker":null},"id":"1356","type":"Grid"},{"attributes":{},"id":"1428","type":"UnionRenderers"},{"attributes":{},"id":"1354","type":"BasicTicker"},{"attributes":{},"id":"1422","type":"AllLabels"},{"attributes":{"callback":null,"tooltips":[["Auteur","@index"],["nombre de publication","@adjusted_node_size"]]},"id":"1361","type":"HoverTool"},{"attributes":{"fill_color":{"field":"adjusted_node_size","transform":{"id":"1396"}},"size":{"value":15}},"id":"1397","type":"Circle"},{"attributes":{},"id":"1358","type":"WheelZoomTool"},{"attributes":{},"id":"1357","type":"PanTool"}],"root_ids":["1408"]},"title":"Bokeh Application","version":"2.4.2"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            const fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  const docs_json = document.getElementById('1673').textContent;
+                  const render_items = [{"docid":"c2a274e6-fb59-4346-aca7-5af039df2ac9","root_ids":["1408"],"roots":{"1408":"badf9077-2f1d-45ae-9937-d021da53382a"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    let attempts = 0;
+                    const timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

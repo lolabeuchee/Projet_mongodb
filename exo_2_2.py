@@ -1,7 +1,16 @@
 from pymongo import MongoClient
 from pprint import pprint
 import pandas as pd
-
+import networkx as nx
+from bokeh.plotting import output_file
+from bokeh.io import  show
+from bokeh.models import Range1d, Circle, MultiLine,Div
+from bokeh.plotting import figure
+from bokeh.plotting import from_networkx
+from bokeh.palettes import Spectral8
+from bokeh.transform import linear_cmap
+from bokeh.models.widgets import Panel,Tabs
+from bokeh.layouts import  column
 
 
 db_uri = "mongodb+srv://etudiant:ur2@clusterm1.0rm7t.mongodb.net/"
@@ -71,3 +80,76 @@ df = pd.DataFrame({'noeud1':liste_neoud_i,'noeud2':liste_neoud_j,'nb_commun':lis
 
 df.columns = ['source','target','weight']
 
+
+
+
+gr=df.groupby('source',as_index=False).agg({'weight':sum})
+gr=gr[gr.weight==0]
+gr['target']=gr.source
+
+
+df2=df[ df.weight !=0 ]
+
+df2=pd.concat([df2, gr])
+
+nb_publi=[(nom,len(taille)) for nom,taille in dico.items()]
+
+G1 = nx.from_pandas_edgelist(df2, 'source', 'target', 'weight')
+
+
+title = 'Réseau de publications scientifiques'
+
+
+HOVER_TOOLTIPS = [
+       ("Auteur", "@index"),
+        ("nombre de publication", "@adjusted_node_size")
+]
+
+plot = figure(tooltips = HOVER_TOOLTIPS,
+              tools="pan,wheel_zoom,save,reset", active_scroll='wheel_zoom',
+            x_range=Range1d(-1.2,1.2), y_range=Range1d(-1.2, 1.2), title=title)
+
+
+network_graph = from_networkx(G1, nx.spring_layout)
+
+#####
+
+adjusted_node_size = dict(nb_publi)
+nx.set_node_attributes(G1, name='adjusted_node_size', values=adjusted_node_size)
+
+color_by_this_attribute = 'adjusted_node_size'
+
+
+color_palette = Spectral8
+
+#network_graph = from_networkx(G1, nx.spring_layout)
+network_graph = from_networkx(G1, nx.spring_layout)
+
+
+commun={}
+for  (u, v, d) in G1.edges(data=True):
+    if u!=v:
+        commun[(u, v)] = d['weight']
+    
+nx.set_edge_attributes(G1, commun, "weight")
+
+
+
+minimum_value_color = min(network_graph.node_renderer.data_source.data[color_by_this_attribute])
+maximum_value_color = max(network_graph.node_renderer.data_source.data[color_by_this_attribute])
+network_graph.node_renderer.glyph = Circle(size=15,fill_color=linear_cmap(color_by_this_attribute, color_palette, minimum_value_color, maximum_value_color))
+network_graph.edge_renderer.glyph = MultiLine(line_color="#CCCCCC", line_alpha=0.8, line_width="weight")
+
+
+
+plot.renderers.append(network_graph)
+
+div = Div(text="""
+<h1> Explication </h1>
+<p> Ce réseau permet de visualiser les liens entre les auteurs de publications scientifiques, en utilisant un code couleur qui permette de distinguer les auteurs par leurs nombres de publications et en représentant les liens (co-publications) existant entre les auteurs. l’épaisseur des traits joignant deux auteurs est proportionnelle au nombre de publications communes entre ceux-ci (Il peut être nécéssaire de zoomer pour s'en rendre compte).</p>""",style={'text-align':'justify','color':'black','background-color':'lavender','padding':'15px','border-radius':'10px'})
+
+tab = column(div,plot)
+
+output_file("exo2.2.html")
+
+show(tab)
