@@ -147,7 +147,7 @@ legend.click_policy="hide"
 legend.title = "Cliquer sur les quartiers à afficher"
 
 div = Div(text="""
-<h1> Graphique n°4 </h1>
+<h1> Explication </h1>
 <p> Cette carte montre les restaurants italiens qui ont été noté au moins une fois A et dont les notes ont été effectuées entre le "2015/01/01" et le "2012/01/01". Cette requête permet de recupérer la localisation, le nom de la rue du restaurant, le nom du restaurant et leurs quartiers.
 Nous pouvons visualiser les quartiers selon leur couleurs. 
 </p>
