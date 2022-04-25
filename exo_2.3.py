@@ -148,10 +148,10 @@ legend.title = "Cliquer sur les quartiers à afficher"
 
 div = Div(text="""
 <h1> Graphique n°4 </h1>
-<p> Cette carte montre les restaurants italiens qui ont été noté au moins une fois A dont les notes ont été effectué entre "2015/01/01" et le "2012/01/01". Cette requete permet de recupérer la localisation, le nom de la rue du restaurant, le nom du restaurant et leurs quartiers.
+<p> Cette carte montre les restaurants italiens qui ont été noté au moins une fois A et dont les notes ont été effectuées entre le "2015/01/01" et le "2012/01/01". Cette requête permet de recupérer la localisation, le nom de la rue du restaurant, le nom du restaurant et leurs quartiers.
 Nous pouvons visualiser les quartiers selon leur couleurs. 
 </p>
-<p> Précision : Le widget permet de selectioner et deselctionner un/des quartiers pour ne visualiser seulement certains quartiers.</p>""",style={'text-align':'justify','color':'black','background-color':'lavender','padding':'15px','border-radius':'10px'})
+<p> Précision : Le widget permet de selectionner et deselectionner un/des quartiers pour ne visualiser que certains quartiers.</p>""",style={'text-align':'justify','color':'black','background-color':'lavender','padding':'15px','border-radius':'10px'})
 
 tab = column(div,p)
 
