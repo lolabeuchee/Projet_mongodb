@@ -118,7 +118,7 @@ gl5 = p.scatter('longitude','latitude',size='bronx',source=source,color="purple"
 
 
 #Affichage au survol des points
-hover_tool = HoverTool(tooltips=[( 'quartier', '@quartiers'),( 'street', '@street')]) 
+hover_tool = HoverTool(tooltips=[( 'name', '@name'),( 'quartier', '@quartiers'),( 'street', '@street')]) 
 p.add_tools(hover_tool)
 
 picker1 = ColorPicker(title="Manhattan",color=gl1.glyph.line_color,width=100)
